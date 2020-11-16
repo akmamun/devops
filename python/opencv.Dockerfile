@@ -1,13 +1,14 @@
 #base image
 FROM python:3.8.6-slim-buster
 
-RUN apt-get update 
-RUN apt-get install -y libgl1-mesa-dev
-RUN apt-get -y install libglib2.0-0 
-RUN apt-get -y install libsm6 \ 
-        libxrender-dev \ 
-        libxext6
+# update and opencv dependencies install
+RUN apt-get update && apt-get install -y libgl1-mesa-dev \
+    libglib2.0-0 \ 
+    libsm6 \ 
+    libxrender-dev \ 
+    libxext6    
 
+# upgrade pip
 RUN pip3 install --upgrade pip
 
 ENV PYTHONDONTWRITEBYTECODE 1
