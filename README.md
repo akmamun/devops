@@ -1,4 +1,4 @@
-# Docker files of different languages 
+# Dockerfile for different environment 
 
 - [OpenCV Python](python/opencv.Dockerfile) 
 - [Django Gunicorn](python/django.Dockerfile) 
